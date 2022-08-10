@@ -136,14 +136,13 @@ class HexagonWidget extends StatelessWidget {
 
     return Align(
       child: Container(
-        color: Colors.red,
         padding: EdgeInsets.all(padding ?? 0.0),
         width: innerSize.width,
         height: innerSize.height,
         child: CustomPaint(
           painter: HexagonPainter(
             pathBuilder,
-            // color: Colors.green,
+            color: Colors.white,
             elevation: elevation,
           ),
           child: ClipPath(
