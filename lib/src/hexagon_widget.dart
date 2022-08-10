@@ -142,7 +142,7 @@ class HexagonWidget extends StatelessWidget {
         child: CustomPaint(
           painter: HexagonPainter(
             pathBuilder,
-            color: color,
+            color: Colors.green,
             elevation: elevation,
           ),
           child: ClipPath(
