@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:ui' as ui;
 
 import 'hexagon_path_builder.dart';
 
@@ -11,13 +12,15 @@ class HexagonPainter extends CustomPainter {
   final Color color;
 
   final Paint _paint = Paint()
-    ..shader = RadialGradient(colors: [
-      Color(0xFFc9284f),
+  ..shader = ui.Gradient.linear(
+    Offset(-1, -1),
+    Offset(1, 1),
+    [
+       Color(0xFFc9284f),
       Color(0xFfff6666),
       Color(0xFFFFb072),
-    ]).createShader(
-      Rect.fromCircle(center: Offset(0, 0), radius: 5),
-    );
+    ],
+  );
   Path _path;
 
   @override
