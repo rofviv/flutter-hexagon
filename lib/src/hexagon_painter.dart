@@ -14,7 +14,7 @@ class HexagonPainter extends CustomPainter {
   final Paint _paint = Paint()
   ..shader = ui.Gradient.linear(
     Offset(0, 0),
-    Offset(1, 1),
+    Offset(0, 0),
     [
        Color(0xFFc9284f),
       Color(0xFfff6666),
