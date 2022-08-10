@@ -11,23 +11,23 @@ class HexagonPainter extends CustomPainter {
   final double elevation;
   final Color color;
 
-  final Paint _paint = Paint()
-  ..shader = ui.Gradient.linear(
-    Offset(0, 0),
-    Offset(0, 0),
+  final Paint _paint = Paint();
+  Path _path;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    // _paint.color = color ?? Colors.white;
+    _paint.shader = ui.Gradient.linear(
+    size.topLeft(ui.Offset.infinite),
+    size.bottomRight(ui.Offset.infinite),
     [
        Color(0xFFc9284f),
       Color(0xFfff6666),
       // Color(0xFFFFb072),
     ],
   );
-  Path _path;
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    _paint.color = color ?? Colors.white;
-    _paint.isAntiAlias = true;
-    _paint.style = PaintingStyle.fill;
+    // _paint.isAntiAlias = true;
+    // _paint.style = PaintingStyle.fill;
 
     _path = pathBuilder.build(size);
 
