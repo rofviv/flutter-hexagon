@@ -18,8 +18,8 @@ class HexagonPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     // _paint.color = color ?? Colors.white;
     _paint.shader = ui.Gradient.linear(
-    size.topLeft(ui.Offset.infinite),
-    size.bottomRight(ui.Offset.infinite),
+    size.topLeft(ui.Offset(1,1)),
+    size.bottomRight(ui.Offset(1,1)),
     [
        Color(0xFFc9284f),
       Color(0xFfff6666),
