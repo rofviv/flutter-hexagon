@@ -22,8 +22,8 @@ class HexagonPainter extends CustomPainter {
     size.bottomRight(ui.Offset(1,1)),
     [
        Color(0xFFc9284f),
-      Color(0xFfff6666),
-      // Color(0xFFFFb072),
+      // Color(0xFfff6666),
+      Color(0xFFFFb072),
     ],
   );
     // _paint.isAntiAlias = true;
